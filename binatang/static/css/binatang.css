@@ -1,0 +1,11 @@
+.judul {
+    height: 100px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-bottom: 10px;
+}

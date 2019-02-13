@@ -1,0 +1,21 @@
+{% extends 'base.2.html' %}
+
+{% block title %}
+<title>Binatang Buas</title>
+{% endblock %}
+
+{% block content %}
+    {% for binatang in binatangs %}
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="{{ binatang.images }}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h3>{{ binatang.name }}</h3>
+                <small>Spesies: {{ binatang.species }}</small><br>
+                    {{ binatang.description }}                  
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+    

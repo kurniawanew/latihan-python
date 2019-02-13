@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/binatang.css' %}">
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12 text-center judul">Daftar Binatang</div>
+        </div>
+        {% for data in animals %}
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="{{ data.images }}" alt="">
+            </div>
+            <div class="col-md-8">
+                <h3>{{ data.name }}</h3>
+                <small>Spesies: {{ data.species }}</small><br>
+                    {{ data.description }}                  
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>
